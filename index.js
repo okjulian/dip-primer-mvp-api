@@ -14,7 +14,7 @@ app.use(express.urlencoded());
 app.use(cors());
 
 app.post('/email', function(req, res){
-  var db = mongo.db(MONGODB_URL, {safe: true});
+  var db = mongo.db(MONGODB_URL, {w: 1});
   db.collection('users').insert({email: req.body.email}, function (err, user) {
     res.json({_id: user[0]._id});
   });
