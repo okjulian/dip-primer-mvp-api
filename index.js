@@ -3,7 +3,10 @@ app = express(),
 mongo = require('mongoskin'),
 cors = require('cors');
 
-var MONGODB_URL = process.env.MONGODB_URL || "mongodb://localhost:27017/dip-testdb";
+var MONGODB_URL = process.env.MONGODB_URL ||
+  process.env.MONGOLAB_URI ||
+  process.env.MONGOHQ_URL ||
+  "mongodb://localhost:27017/dip-testdb";
 var PORT = process.env.PORT || 3000;
 
 app.use(express.json());
