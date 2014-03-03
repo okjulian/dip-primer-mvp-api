@@ -5,9 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "express": "*",
-    "supertest": "~0.9.0",
-    "mocha": "*",
-    "should": "*"
+    "mongoskin": "^1.3.20",
+    "cors": "^2.1.1"
   },
   "scripts": {
     "test": "mocha -R min --recursive"
@@ -15,7 +14,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mongoskin": "^1.3.20",
+    "supertest": "~0.9.0",
+    "mocha": "*",
+    "should": "*",
     "chai": "^1.9.0"
   }
 }
